@@ -37,6 +37,7 @@ const StepOne = ({ setForm, formData, navigation }) => {
             <Form.Group controlId="formGridFname" className="form-group-custom">
               <Form.Label className="form-label-custom">Tag</Form.Label>
               <Form.Control
+                required
                 className="form-m-d"
                 type="number"
                 label="TT"
@@ -48,6 +49,7 @@ const StepOne = ({ setForm, formData, navigation }) => {
               <Form.Label className="form-label-custom">Monat</Form.Label>
 
               <Form.Control
+              required
                 className="form-m-d"
                 type="number"
                 label="MM"
@@ -59,6 +61,7 @@ const StepOne = ({ setForm, formData, navigation }) => {
               <Form.Label className="form-label-custom">Jahr</Form.Label>
 
               <Form.Control
+              required
                 className="form-y"
                 type="number"
                 label="JJJJ"
