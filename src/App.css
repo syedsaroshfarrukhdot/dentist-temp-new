@@ -1,4 +1,4 @@
-#root{
+#root {
   overflow: hidden;
 }
 .App {
@@ -40,12 +40,13 @@
   }
 }
 .site_wrapper {
-  max-width: 850px;
-  min-height: 750px;
+  max-width: 600px;
+  min-height: auto;
   margin: auto;
   flex: 1 1 0%;
   font-family: Inter !important;
-  border: 4px solid rgb(149, 175, 178);
+  background-color: #f6f6f6;
+  border-radius: 2%;
 }
 .wrraper_header {
   text-align: center;
@@ -198,11 +199,6 @@
   background-color: #fad705 !important;
 }
 
-.btn-primary:active:focus {
-  color: #024b54;
-  background-color: #fad705 !important;
-  box-shadow: none;
-}
 .btn-success {
   background-color: #fad705;
   color: #024b54;
@@ -222,7 +218,6 @@
   margin-bottom: 45px;
 }
 @media (min-width: 360px) {
- 
   .klyThv {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -260,9 +255,7 @@
 }
 @media (max-width: 480px) {
   .pin_img {
-   
     max-height: 20%;
-
   }
 }
 
@@ -314,16 +307,15 @@
   }
 }
 
-.header{
+.header {
   width: 110% !important;
 }
-.d .title{
+.d .title {
   font-size: 77px !important;
   line-height: 83px !important;
-} 
+}
 @media screen and (min-device-width: 1400) and (orientation: portrait) {
   .header a img {
     margin-left: -40px !important;
   }
 }
-

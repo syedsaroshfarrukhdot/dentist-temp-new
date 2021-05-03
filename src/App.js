@@ -1,14 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import LandingPage from './components/landing-page/LandingPage'
-
-
+import logo from "./logo.svg";
+import "./App.css";
+import MultiStep from "./components/form/MultiStepForm";
+import Radio from "./components/Radio/RadioButton";
 
 function App() {
   return (
-   <>
-   <LandingPage />
-   </>
+    <>
+      <div className="site_wrapper">
+        <MultiStep />
+      </div>
+    </>
   );
 }
 
