@@ -129,8 +129,8 @@
     margin-bottom: -10px;
   }
   .site_wrapper {
-    max-width: 850px;
-    min-height: 750px;
+    max-width: 95%;
+    min-height: auto;
     margin: auto;
     flex: 1 1 0%;
     border: none;
@@ -295,7 +295,9 @@
   }
 
   .btn_container {
-    display: none !important;
+    display: flex !important;
+    margin-bottom: 12px;
+    margin-top: 0px;
   }
   .btn_container_slider_mobile_slider {
     display: block;

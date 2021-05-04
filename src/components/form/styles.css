@@ -98,9 +98,10 @@ select {
   background-color: #ef562d;
   border: none;
   width: 98%;
-  padding: 20px 0;
+  padding: 14px 0;
   font-size: 18pt;
   line-height: 20px;
+  margin-bottom: 8px;
 }
 .btn-primary:hover {
   color: white;
@@ -117,8 +118,8 @@ select {
 
 @media only screen and (max-width: 600px) {
   .btn_container {
-    margin-top: 45px;
-    margin-bottom: 45px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     display: flex;
   }
 }
@@ -193,6 +194,23 @@ select {
   .select_main {
     margin-right: 15px;
   }
+  .form-y {
+    width: 140px !important;
+    text-align: center;
+    font-size: 18pt !important;
+  }
+
+  .form-m-d {
+    width: 100px !important;
+    text-align: center;
+    font-size: 18pt !important;
+  }
+  .check-boc-custom {
+    width: 160px !important;
+  }
+  .form-control {
+    height: 38px !important;
+  }
 }
 
 .form {
@@ -222,6 +240,7 @@ input:checked label::after {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 .animation_size_one {
   width: 150px;
@@ -251,9 +270,7 @@ input:checked label::after {
     width: 60px;
     margin-top: -5px;
   }
-  .animation {
-    margin-right: 35px;
-  }
+
   .animation_desciption {
     margin-left: 28px;
   }
@@ -343,8 +360,26 @@ small {
   height: 55px;
   width: 260px;
   border-radius: 6px;
-
 }
 .form-row-custom-checkbox {
   justify-content: space-around;
+  margin-top: 25px;
+}
+.aniimation-color {
+  color: #59adb7;
+  font-size: 16pt;
+  text-align: center;
+  font-weight: bolder;
+}
+.animation_size_one {
+  margin-left: 0px !important;
+  width: 125px;
+}
+.btn_container_1_single {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+.animation_btn {
+  width: 95%;
 }
