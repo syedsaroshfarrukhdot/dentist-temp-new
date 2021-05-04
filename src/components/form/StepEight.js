@@ -1,98 +1,65 @@
 import React, { useEffect, useState } from "react";
-import formLogo from '../../images/icon-wohngeld.png'
-import formImageTwo from '../../images/tuev_500.png'
-import verkaufen from '../../images/verkaufen.svg'
-import kauf from '../../images/kaufen.svg'
-import sonstige from '../../images/sonstige.svg'
-import { Button } from 'react-bootstrap';
-import styled from "styled-components";
+import totalflat from "../../images/total-flat-sq.svg";
+import { Button, ButtonGroup } from "react-bootstrap";
 import ProgressBar from "../progress-bar/ProgressBar";
-
-const Styles = styled.div`
-
-.btn-primary {
-  color:#024B54;
-  background-color: white;
-  border: none;
-  
-  border-radius: 0px;
-  font-size: x-large;
-  margin-left: 10px;
-  box-shadow: rgb(0 0 0 / 16%) 5px 5px 20px;
-  text-decoration: #024B54;
-  font-size: 16px;
-  width: 225px;
-  height: 350px;
-}
-.btn-img{
-  display: block;
-  height: 64px;
-  max-width: 100%;
-  margin-left: 68px;
-  margin-bottom: 5px;
-}
+import Slider from "../slider/Slider";
+import formImageTwo from '../../images/tuev_500.png'
 
 
-`;
+const StepEight = ({ setForm, formData, navigation }) => {
+  const { StepOne } = formData;
 
-
-
-
-const StepOne = ({ setForm, formData, navigation }) => {
-  const { firstName, lastName, nickName } = formData;
-
-  const { next } = navigation;
-  const [value, setValue] = useState(89);
+  const { previous, next } = navigation;
+  const [value, setValue] = useState(12);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       setValue((oldValue) => {
-        const newValue = oldValue + 9;
+        const newValue = oldValue + 7;
 
         return newValue;
       });
     }, 200);
   }, []);
 
+  const myCallBack = (statefromchild) => {
+    formData.StepSix = statefromchild;
+  };
+
   return (
     <div className="form">
-       
-     
-      <div className="progress_bar_container">
-        <div className="progress_align">
-        <p className="text_form">Wofür benötigen Sie den Immobilienwert?</p>
-          <ProgressBar
-            color={"#085159"}
-            width={"750px"}
-            value={value}
-            max={100}
+      <h4 className="Form-Header">Wünschen Sie eine <strong>Selbstbeteiligung</strong>?</h4>
+      <div className="">
+        <div className="">
+          <Slider
+            left_text="<50 m²"
+            right_text=">500 m²"
+            value="0"
+            min="0"
+            max="450"
+            step="150"
+            unit="m²"
+            text="Alternativ eintippen"
+            callBackFromParent={myCallBack}
           />
-        </div>
-      </div>
-
-      <div className="btn_container">
-        <Styles>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={verkaufen} />Verkauf</Button>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={kauf} />Kauf</Button>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;<img  className="btn-img" src={sonstige} />Sonstiges</Button>
-        </Styles>
-      </div>
-      <div className="btn_container_mobile">
-      <Button variant="primary" onClick={next} value="Weiter">&nbsp;Verkauf</Button>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;Kauf</Button>
-        <Button variant="primary" onClick={next} value="Weiter">&nbsp;Sonstiges</Button>
-      </div>
-
-    
-
-      <img
-        src={formImageTwo}
-        alt="img"
-        className="imageCover"
-      />
+          
     </div>
-    
+    </div>
+    <div className="btn_container_1_single">
+        <Button
+          className="animation_btn"
+          variant="primary"
+          onClick={next}
+          value="Weiter"
+        >
+          <b>></b>
+          <span className="glyphicon glyphicon-menu-right"></span> WEITER
+        </Button>
+      </div>
+    </div>
+      
+      
   );
 };
 
-export default StepOne;
+export default StepEight;

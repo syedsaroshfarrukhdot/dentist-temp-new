@@ -128,7 +128,7 @@ const StepTwo = ({ setForm, formData, navigation, colorBg }) => {
           <b>></b>
           <span className="glyphicon glyphicon-menu-right"></span> WEITER
           <br></br>
-          <small>( Schritt 1 von 2 )</small>
+          <small>( Schritt 2 von 2 )</small>
         </Button>
       </div>
     </div>

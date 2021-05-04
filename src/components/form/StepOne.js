@@ -32,7 +32,7 @@ const StepOne = ({ setForm, formData, navigation }) => {
         Ihr <strong>Geburtsdatum</strong>
       </h4>
       <div>
-        <Form className="">
+        <Form>
           <Form.Row className="form-row-custom">
             <Form.Group controlId="formGridFname" className="form-group-custom">
               <Form.Label className="form-label-custom">Tag</Form.Label>

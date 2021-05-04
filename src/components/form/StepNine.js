@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from "react";
-import map from "../../images/map.png";
-import pin from "../../images/pin-grey.svg";
-import formImageTwo from '../../images/tuev_500.png'
-
-import { Button, ButtonGroup } from "react-bootstrap";
+import formLogo from "../../images/icon-wohngeld.png";
+import formImageTwo from "../../images/tuev_500.png";
+import house from "../../images/house.svg";
+import two from "../../images/two.svg";
+import three from "../../images/three.svg";
+import four from "../../images/four.svg";
+import five from "../../images/five.svg";
+import { Button } from "react-bootstrap";
+import { Form, Col } from "react-bootstrap";
 import ProgressBar from "../progress-bar/ProgressBar";
-import Slider from "../slider/Slider";
 
-const StepThree = ({ setForm, formData, navigation }) => {
-  const { phone, email } = formData;
+const StepOne = ({ setForm, formData, navigation }) => {
+  const { firstName, lastName, nickName } = formData;
 
-  const { previous, next } = navigation;
+  const { next } = navigation;
 
-  const [value, setValue] = useState(90);
-
+  const [value, setValue] = useState(0);
   useEffect(() => {
     const interval = setTimeout(() => {
       setValue((oldValue) => {
-        const newValue = oldValue + 10;
+        const newValue = oldValue + 12;
 
         return newValue;
       });
@@ -26,54 +28,63 @@ const StepThree = ({ setForm, formData, navigation }) => {
 
   return (
     <div className="form">
-     
-      <div className="progress_bar_container">
-        <div className="progress_align">
-        <p className="text_form">
-      In welcher Region befindet sich die Immobilie?
-      </p>
-          <ProgressBar
-            color={"#085159"}
-            width={"750px"}
-            value={value}
-            max={100}
-          />
-        </div>
-      </div>
+      <h4 className="Form-Header">
+        Ihr <strong>Geburtsdatum</strong>
+      </h4>
+      <div>
+        <Form className="">
+          <Form.Row className="form-row-custom">
+            <Form.Group controlId="formGridFname" className="form-group-custom">
+              <Form.Label className="form-label-custom9">PLZ</Form.Label>
+              <Form.Control
+                required
+                className="form-place"
+                type="text"
+                label="PLZ"
+                placeholder="PLZ"
+                onChange={(event) => (formData.firstName = event.target.value)}
+              />
+            </Form.Group>
+            <Form.Group controlId="formGridFname" className="form-group-custom">
+              <Form.Label className="form-label-custom9">Ort</Form.Label>
 
-      <div className="btn_container_slider">
-        <div className="map_slider">
-          <img src={map} className="map_img"/>
-          <img src={pin} className="pin_img"/>
-          <div className="input_map">
-          <label className="label_map">Postleitzahi</label>
-          <input type="number" placeholder="z.B 12357" className="input_field_map"/>
-          <p className="map_text">Wir benötigen Ihre Postleitzahl, um den Wert Ihrer Immobilie besser ermitteln zu können.</p>
-          <Button variant="success" onClick={next} >Weiter ></Button>
-        </div>
-        </div>
-        
+              <Form.Control
+              required
+                className="form-postcode"
+                type="text"
+                label="Ort"
+                placeholder="Ort"
+                onChange={(event) => (formData.firstName = event.target.value)}
+              />
+            </Form.Group>
+            <Form.Group controlId="formGridFname" className="form-group-custom">
+              <Form.Label className="form-label-custom9">Straße / Nr.</Form.Label>
+
+              <Form.Control
+              required
+                className="form-address"
+                type="text"
+                label="Straße / Nr."
+                placeholder="Straße / Nr."
+                onChange={(event) => (formData.firstName = event.target.value)}
+              />
+            </Form.Group>
+          </Form.Row>
+        </Form>
       </div>
-      <div className="btn_container_slider_mobile">
-        <div className="map_slider">
-          <img src={map} className="map_img"/>
-          <img src={pin} className="pin_img"/>
-          
-        </div>
-        <div className="input_map">
-        <label className="label_map">Postleitzahi</label>
-          <input type="number" placeholder="z.B 12357" className="input_field_map"/>
-          <p className="map_text">Wir benötigen Ihre Postleitzahl, um den Wert Ihrer Immobilie besser ermitteln zu können.</p>
-          <Button variant="success" onClick={next} >Weiter ></Button>
-        </div>
+      <div className="btn_container_1_single">
+        <Button
+          className="animation_btn"
+          variant="primary"
+          onClick={next}
+          value="Weiter"
+        >
+          <b>></b>
+          <span className="glyphicon glyphicon-menu-right"></span> WEITER
+        </Button>
       </div>
-      <img
-        src={formImageTwo}
-        alt="img"
-        className="imageCover"
-      />
-     </div>
+    </div>
   );
 };
 
-export default StepThree;
+export default StepOne;

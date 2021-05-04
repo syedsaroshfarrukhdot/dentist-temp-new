@@ -95,7 +95,7 @@ const StepThree = ({ setForm, formData, navigation }) => {
                 <CircularProgressbarWithChildren
                   value={value}
                   strokeWidth={6}
-                  text={`${roundedValue}%`}
+                  text={`${roundedValue}`}
                   /* This is important to include, because if you're fully managing the
         animation yourself, you'll want to disable the CSS animation. */
                   styles={buildStyles({

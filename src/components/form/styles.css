@@ -92,6 +92,9 @@ select {
   .btn-primary {
     font-size: 18pt;
   }
+  .check-box-custom-full-width {
+    width: 340px !important;
+  }
 }
 .btn-primary {
   color: white;
@@ -211,6 +214,21 @@ select {
   .form-control {
     height: 38px !important;
   }
+  .form-address{
+    width: 335px !important;
+    
+    font-size: 18pt !important;
+  }
+  .form-place{
+  width: 100px !important;
+  font-size: 18pt !important;
+  }
+  .form-postcode{
+    width: 225px !important;
+    font-size: 18pt !important;
+    
+  }
+  
 }
 
 .form {
@@ -257,8 +275,21 @@ input:checked label::after {
 
 .animation_desciption {
   margin-left: 60px;
-}
 
+}
+.form-address{
+  width: 562px ;
+  
+  font-size: 22pt ;
+}
+.form-place{
+ width: 150px;
+ font-size: 22pt ;
+}
+.form-postcode{
+  width: 400px;
+  font-size: 22pt ;
+}
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
   .animation_size_one {
     width: 90px;
@@ -321,6 +352,9 @@ input:checked label::after {
     margin-top: 20px;
     justify-content: center;
   }
+  .step11-size{
+    font-size: 15pt !important;
+  }
 }
 
 /*New Page Css*/
@@ -361,15 +395,31 @@ small {
   width: 260px;
   border-radius: 6px;
 }
+.check-box-custom-full-width{
+  background-color: white;
+  padding: 15px;
+  height: 60px;
+  width: 565px;
+  border-radius: 6px;
+}
 .form-row-custom-checkbox {
   justify-content: space-around;
   margin-top: 25px;
+}
+.form-row-custom-checkbox-full-width{
+  justify-content: space-around;
 }
 .aniimation-color {
   color: #59adb7;
   font-size: 16pt;
   text-align: center;
   font-weight: bolder;
+}
+.aniimation-color-ten {
+  color: #59adb7;
+  font-size: 16pt;
+  text-align: center;
+ 
 }
 .animation_size_one {
   margin-left: 0px !important;
@@ -382,4 +432,24 @@ small {
 }
 .animation_btn {
   width: 95%;
+}
+.bordercolor{
+  background-color: #eee;
+    width: 50%;
+    margin-left: 25%;
+    padding: 15px 0px;
+}
+.form-label-custom9 {
+  margin-bottom: 0rem;
+  font-size: 10pt;
+  display: flex;
+}
+.bold-red{
+  color: red;
+}
+.discription{
+  font-size: 13pt;
+}
+.step11-size{
+  font-size: 20pt;
 }
